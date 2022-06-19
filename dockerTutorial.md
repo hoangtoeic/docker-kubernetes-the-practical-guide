@@ -4,3 +4,14 @@ So, with that as background, run a container with no options and by default you 
 
 2. Way 2: 
 I<img src= "./Image/7_start_container.PNG">
+
+# Rename Image and container when build or run 
+```docker
+
+docker build -t myimage .
+docker run --name mycontainer myimage
+docker stop mycontainer
+
+```
+
+<img src = "./Image/24_Rename Image and container when build or run.png">
