@@ -15,3 +15,7 @@ docker stop mycontainer
 ```
 
 <img src = "./Image/24_Rename Image and container when build or run.png">
+
+# Kubernetes
+### Minikube is k8s cluster = 1 worker node + 1 master node
+### Cubectl is cli to interact with cluster 
