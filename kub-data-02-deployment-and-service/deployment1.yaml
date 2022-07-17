@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  name: deployment-17-07
+spec: 
+  replicas: 2
+  selector:
+    matchLabels: 
+      app: story
+  template: 
+    metadata: 
+      labels:
+        app: story
+    spec: 
+      containers:
+        - name: container-test-17-07
+          image: hoangtoeic/kub2:2
+          volumeMounts:
+            - mountPath: /app/story
+              name: volume-17-07
+      volumes: 
+        - name: volume-17-07
+          # emptyDir: {}
+          # hostPath: 
+          #   path: /data
+          #   type: DirectoryOrCreate
+          persistentVolumeClaim:
+            claimName: host-pvc
+    
